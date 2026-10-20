@@ -1,0 +1,47 @@
+# Provenance degli asset (prototipo)
+
+Tutte le immagini sono caricate al volo dal sito attuale del cliente (t91padel.com, CDN Shopify), non sono nel progetto. Da sostituire con file forniti dal cliente prima della pubblicazione.
+
+| Uso | File (https://t91padel.com/cdn/shop/files/) |
+|---|---|
+| Hero desktop | Racchetta_HOLO_arancione_in_carbonio_pc.webp |
+| Hero mobile | Racchetta_HOLO_arancione_in_carbonio_cell.webp |
+| Prodotto Iriart | IRIART_3_COVER_PC_a5cd421b-ba5d-4364-9af6-ef683e77ac0d.webp |
+| Prodotto Boss One K12 | BOSS_ONE_K12_5.0_COVER_PC_640x.webp |
+| Logo (header e footer, nero; bianco via filtro CSS) | Logo_T91_Nero.svg |
+| Community / abbigliamento donna | Abbigliamento_Donna_Computer.webp |
+
+Mancano: una fotografia per servizio (riparazione, personalizzazione, centro, esperienza), (il logo T91 ora è quello vero del sito, caricato dal CDN).
+Testo da confermare col cliente: "Spedizione in tutto il mondo" (preso dalla barra del sito attuale).
+
+## Foto di campagna generate (IA)
+
+Generate con Higgsfield (modello gpt_image_2_5, 2k) il 20/10/2026, usando come riferimento la racchetta Holo, la foto donna e la t-shirt dal sito del cliente. Sono immagini sintetiche di prototipo: i capi e il volto non sono di un vero shooting. Da sostituire con fotografia reale prima della pubblicazione.
+
+| File | Uso | Prompt (sintesi) |
+|---|---|---|
+| assets/campaign/hero.jpg | Hero home | Giocatore in volo in uno smash al vetro del campo, racchetta Holo, sera sotto i riflettori, spazio scuro a sinistra |
+| assets/campaign/donna-campo.jpg | Collezione Donna, Experience | Giocatrice in completo terracotta T91 esce dal campo con la racchetta Holo, luce di fine pomeriggio |
+| assets/campaign/uomo.jpg | Collezione Uomo, Personalizzazione | Uomo con t-shirt bianca T91 appoggiato al vetro del campo, racchetta Holo in mano |
+| assets/campaign/donna.jpg | (non usata al momento) | Donna in top verde salvia T91, racchetta Holo sotto il braccio |
+| assets/campaign/dettaglio.jpg | Care / Repair | Mani sull'impugnatura della racchetta Holo, sfondo campo sfocato |
+
+| assets/campaign/uomo-azione.jpg | Collezione Uomo (home) | Giocatore in volee di diritto a rete, t-shirt bianca T91, luce calda di fine pomeriggio |
+| assets/campaign/donna-azione.jpg | Collezione Donna (home) | Giocatrice in affondo per un rovescio basso, completo terracotta T91, stessa luce |
+
+| assets/campaign/lookbook-g1.jpg | Griglia campagna (home), tile 1 | Donna in completo T91 lungo un muro, ombre dure, racchetta Holo; direzione artistica da riferimento editoriale street |
+| assets/campaign/lookbook-g2.jpg | Griglia campagna, tile 2 | Donna appoggiata a una panca contro una serranda d'acciaio, borsa e racchetta Holo |
+| assets/campaign/lookbook-g3.jpg | Griglia campagna, tile 3 | Uomo disteso su una panca d'acciaio, sfondo grigio-verde, lancia una pallina |
+| assets/campaign/lookbook-g4.jpg | Griglia campagna, tile 4 | Uomo in smash su sfondo di luce blu astratta |
+Le immagini uomo.jpg, donna.jpg, uomo-azione.jpg, donna-azione.jpg, donna-campo.jpg (tranne Experience) non sono più usate nella home.
+
+## Correzioni foto griglia (20/10/2026)
+
+Rigenerate con Higgsfield usando come riferimento i capi e gli ambienti veri forniti dal cliente (top e leggings verdi, borsone arancione, abito lilla, felpa e pantaloncini oliva, foto di campi indoor). Sostituiscono lookbook-g1/g2/g3.
+
+| File | Uso | Contenuto |
+|---|---|---|
+| assets/campaign/v2-g1.jpg | Griglia tile 1 | Donna in top e leggings verde salvia T91 tra i campi indoor, luce dura |
+| assets/campaign/v2-g2.jpg | Griglia tile 2 | Donna con abito lilla T91, borsone arancione T91, racchetta Holo, panca e serranda |
+| assets/campaign/v2-g3.jpg | Griglia tile 3 | Uomo con felpa e pantaloncini oliva T91 su panca nera |
+Capi e borsone sono riprodotti dall'IA a partire dai riferimenti: controllare fedeltà di logo e dettagli prima della pubblicazione.

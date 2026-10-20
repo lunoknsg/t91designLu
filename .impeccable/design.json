@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T00:00:00Z",
+  "title": "Design System: T91 Padel",
+  "extensions": {
+    "colorMeta": {
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#0b0b0b", "tonalRamp": ["#0b0b0b", "#2a2a28", "#444441", "#5f5e59", "#8a8984", "#b4b3ad", "#d9d8d3", "#f1f0ed"] },
+      "ink-2": { "role": "neutral", "displayName": "Ink 2", "canonical": "#2a2a28", "tonalRamp": ["#0b0b0b", "#2a2a28", "#444441", "#5f5e59", "#8a8984", "#b4b3ad", "#d9d8d3", "#f1f0ed"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#ffffff", "tonalRamp": ["#5f5e59", "#8a8984", "#b4b3ad", "#d9d8d3", "#e6e5e1", "#f1f0ed", "#f8f8f6", "#ffffff"] },
+      "stone": { "role": "neutral", "displayName": "Stone", "canonical": "#f1f0ed", "tonalRamp": ["#5f5e59", "#8a8984", "#b4b3ad", "#d9d8d3", "#e6e5e1", "#f1f0ed", "#f8f8f6", "#ffffff"] },
+      "line": { "role": "neutral", "displayName": "Line", "canonical": "#d9d8d3", "tonalRamp": ["#5f5e59", "#8a8984", "#b4b3ad", "#d9d8d3", "#e6e5e1", "#f1f0ed", "#f8f8f6", "#ffffff"] },
+      "muted": { "role": "neutral", "displayName": "Muted", "canonical": "#5f5e59", "tonalRamp": ["#0b0b0b", "#2a2a28", "#444441", "#5f5e59", "#8a8984", "#b4b3ad", "#d9d8d3", "#f1f0ed"] },
+      "ink-line": { "role": "neutral", "displayName": "Ink Line", "canonical": "#2c2c2a", "tonalRamp": ["#0b0b0b", "#1a1a18", "#2c2c2a", "#3a3a37", "#5f5e59", "#8a8984", "#b4b3ad", "#d9d8d3"] },
+      "ink-muted": { "role": "neutral", "displayName": "Ink Muted", "canonical": "#b4b3ad", "tonalRamp": ["#2c2c2a", "#3a3a37", "#5f5e59", "#8a8984", "#9a9992", "#b4b3ad", "#d9d8d3", "#f1f0ed"] },
+      "holo-orange": { "role": "primary", "displayName": "HOLO Orange", "canonical": "#ff6a13", "tonalRamp": ["#3d1700", "#7a2c00", "#b83e00", "#e05600", "#ff6a13", "#ff8d4d", "#ffb487", "#ffdcc7"] },
+      "holo-orange-ink": { "role": "primary", "displayName": "HOLO Orange Ink", "canonical": "#b83e00", "tonalRamp": ["#3d1700", "#7a2c00", "#b83e00", "#e05600", "#ff6a13", "#ff8d4d", "#ffb487", "#ffdcc7"] }
+    },
+    "typographyMeta": {
+      "display-xl": { "displayName": "Display XL", "purpose": "Hero headline, uppercase, max 12ch." },
+      "display-l": { "displayName": "Display L", "purpose": "Section statements." },
+      "display-m": { "displayName": "Display M", "purpose": "Section titles." },
+      "row-title": { "displayName": "Row title", "purpose": "Service rows, plan names, FAQ summaries, guide titles." },
+      "body": { "displayName": "Body", "purpose": "Running copy, 15px." },
+      "lede": { "displayName": "Lede", "purpose": "Intro paragraph, 52ch max." },
+      "label": { "displayName": "Label", "purpose": "Nav, strip, form labels, table headers; 11px uppercase tracked." },
+      "button": { "displayName": "Button", "purpose": "Button label, 12px/600 uppercase tracked." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.16,1,.3,1)", "purpose": "Expo-out for sweeps, arrow slides, image zoom, hero reveal (1.6s clip-path reveal)." },
+      { "name": "color-fast", "value": ".3s", "purpose": "Button background and colour inversion." }
+    ],
+    "breakpoints": [
+      { "name": "product-stack", "value": "700px" },
+      { "name": "split-stack", "value": "800px" },
+      { "name": "nav-collapse", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Solid Button",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "Primary action: orange fill, ink text.",
+      "html": "<a class=\"ds-btn ds-btn-solid\" href=\"#\">Acquista HOLO</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:12px;font:600 12px/1 Archivo,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:17px 26px;border:1px solid currentColor;cursor:pointer;transition:background .3s,color .3s,border-color .3s}.ds-btn-solid{background:#ff6a13;border-color:#ff6a13;color:#0b0b0b}.ds-btn-solid:hover{background:#fff;border-color:#fff}.ds-btn:focus-visible{outline:2px solid #ff6a13;outline-offset:3px}"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Secondary solid on white grounds; turns orange on hover.",
+      "html": "<a class=\"ds-btn ds-btn-ink\" href=\"#\">Scopri i servizi</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:12px;font:600 12px/1 Archivo,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:17px 26px;border:1px solid currentColor;cursor:pointer;transition:background .3s,color .3s,border-color .3s}.ds-btn-ink{background:#0b0b0b;border-color:#0b0b0b;color:#fff}.ds-btn-ink:hover{background:#ff6a13;border-color:#ff6a13;color:#0b0b0b}.ds-btn:focus-visible{outline:2px solid #ff6a13;outline-offset:3px}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Outlined tertiary action; inverts on hover.",
+      "html": "<a class=\"ds-btn ds-btn-line\" href=\"#\">Vedi tutte</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:12px;font:600 12px/1 Archivo,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:17px 26px;border:1px solid currentColor;background:transparent;color:#0b0b0b;cursor:pointer;transition:background .3s,color .3s}.ds-btn-line:hover{background:#0b0b0b;color:#fff}.ds-btn:focus-visible{outline:2px solid #ff6a13;outline-offset:3px}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "announcement-strip",
+      "description": "Tiny uppercase tracked links with a left-origin underline sweep.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Servizi</a><a href=\"#\">Garanzie</a><a href=\"#\">Centri</a></nav>",
+      "css": ".ds-nav{display:flex;gap:26px;font:500 11px/1 Archivo,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase}.ds-nav a{color:#0b0b0b;text-decoration:none;padding:8px 0;position:relative}.ds-nav a::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:1px;background:#0b0b0b;transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1)}.ds-nav a:hover::after,.ds-nav a[aria-current]::after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid #ff6a13;outline-offset:3px}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Signature typographic row replacing cards; orange underline sweeps on hover.",
+      "html": "<a class=\"ds-row\" href=\"#\"><h3>Riparazione</h3><p>Rimettiamo in gioco anche racchette di altri marchi.</p><svg class=\"ds-go\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" width=\"22\" height=\"22\" aria-hidden=\"true\"><path d=\"M3 12h17M14 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-row{display:grid;grid-template-columns:1fr 1.1fr auto;gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid #0b0b0b;border-bottom:1px solid #d9d8d3;color:#0b0b0b;text-decoration:none;position:relative}.ds-row::before{content:'';position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:#ff6a13;transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.16,1,.3,1)}.ds-row:hover::before,.ds-row:focus-visible::before{transform:scaleX(1)}.ds-row h3{font:900 2.2rem/.95 'Big Shoulders Display','Arial Narrow',sans-serif;text-transform:uppercase;margin:0}.ds-row p{font:400 14px/1.55 Archivo,system-ui,sans-serif;color:#5f5e59;max-width:40ch;margin:0}.ds-go{transition:transform .5s cubic-bezier(.16,1,.3,1)}.ds-row:hover .ds-go{transform:translateX(6px)}.ds-row:focus-visible{outline:2px solid #ff6a13;outline-offset:3px}"
+    },
+    {
+      "name": "Product Tile",
+      "kind": "card",
+      "refersTo": "badge-new",
+      "description": "4:5 image, orange new badge, one-line uppercase meta row; not a boxed card.",
+      "html": "<a class=\"ds-prod\" href=\"#\"><span class=\"ds-new\">Novit&agrave;</span><div class=\"ds-ph\"></div><div class=\"ds-meta\"><span>Holo Collection</span><span>Da &euro;328,90</span></div></a>",
+      "css": ".ds-prod{display:block;position:relative;text-decoration:none;color:#0b0b0b;width:260px}.ds-ph{aspect-ratio:4/5;background:#111}.ds-new{position:absolute;top:12px;left:12px;background:#ff6a13;color:#0b0b0b;font:700 11px/1 Archivo,system-ui,sans-serif;letter-spacing:.12em;padding:6px 8px;text-transform:uppercase}.ds-meta{display:flex;justify-content:space-between;gap:16px;padding:14px 2px 22px;font:500 12px/1.3 Archivo,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase}.ds-prod:focus-visible{outline:2px solid #ff6a13;outline-offset:3px}"
+    },
+    {
+      "name": "Centre Finder Input",
+      "kind": "input",
+      "refersTo": "button-line",
+      "description": "Underlined display-type field on a black ground; orange rule on focus.",
+      "html": "<div style=\"background:#0b0b0b;padding:24px\"><input class=\"ds-find\" placeholder=\"CITTA O CAP\" aria-label=\"Cerca centro\"></div>",
+      "css": ".ds-find{width:100%;background:transparent;border:0;border-bottom:1px solid #fff;color:#fff;font:700 2rem/1.2 'Big Shoulders Display','Arial Narrow',sans-serif;text-transform:uppercase;padding:10px 0;border-radius:0}.ds-find::placeholder{color:#9a9992}.ds-find:focus{outline:0;border-bottom-color:#ff6a13}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Retail Floor with the Lights Off",
+    "overview": "A white retail ground interrupted by black campaign fields, as in a sport-fashion store. Services get the same typographic weight as products: large condensed caps, hairline rules, full-bleed photography. Corners are square, there are no cards and no shadows; structure comes from rules, tonal fields (white, stone, black) and scale.\n\nOne orange, the HOLO racket colour, is the only chromatic voice. It marks action and status and is never decoration across a whole surface. Density is generous in section padding and tight in type (display line-height 0.88).",
+    "keyCharacteristics": [
+      "White ground, black campaign fields, stone as the quiet third tone.",
+      "Big Shoulders Display 900 uppercase against Archivo; tiny tracked uppercase for navigation and buttons.",
+      "Square corners, 1px hairlines, no shadows.",
+      "Full-bleed photography with a bottom black gradient for headline legibility.",
+      "Motion is slow reveal on a single expo-out ease."
+    ],
+    "rules": [
+      { "name": "The One Orange Rule", "body": "Orange fills mark action or status only. On white, orange as text uses HOLO Orange Ink, never the bright orange.", "section": "colors" },
+      { "name": "The Two Grounds Rule", "body": "Every section is either white/stone or black (dark); mixed-tone sections do not exist. Hairlines switch from Line to Ink Line with the ground.", "section": "colors" },
+      { "name": "The Caps Rule", "body": "All display type is uppercase Big Shoulders at 900; mixed-case display never appears. Body and labels are never set in the display face except the centre-name input and list names.", "section": "typography" },
+      { "name": "The No-Shadow Rule", "body": "Surfaces never lift. Hover is expressed by a sweep line, colour inversion or a 3.5% image zoom.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do alternate white and black grounds section by section, with orange reserved for the action or status in each.",
+      "Do set every headline, price and number in uppercase Big Shoulders 900 with line-height around 0.88 to 0.95.",
+      "Do build lists as rows divided by 1px hairlines rather than as boxed items.",
+      "Do keep corners square and depth flat.",
+      "Do use HOLO Orange Ink for orange text on white or stone.",
+      "Do keep a 2px orange focus outline with 3px offset.",
+      "Do keep minimum text at 11px, with prefers-reduced-motion disabling the hero reveal and smooth scroll."
+    ],
+    "donts": [
+      "Don't use border-radius, box-shadows or boxed cards.",
+      "Don't introduce a second accent colour or tint a whole section orange.",
+      "Don't use bright orange (#ff6a13) as small text on white.",
+      "Don't set display type in mixed case or in the body face.",
+      "Don't use ease curves other than the expo-out (cubic-bezier(.16,1,.3,1)) for reveal and sweep motion."
+    ]
+  }
+}
