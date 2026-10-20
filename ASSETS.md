@@ -63,3 +63,22 @@ Le 11 immagini in `assets/racchette/` sono state rigenerate con lo stesso proced
 ### Aggiornamento sfondi tono su tono (20/10/2026)
 
 Su richiesta, 8 delle 11 immagini in `assets/racchette/` sono state rigenerate con la parete nella stessa famiglia di colore della racchetta, in tinta più chiara (giallino per Finder Pro K12 Master 5.0, lilla chiaro per Finder Pro K12 3.0 PWR, lavanda per Boss One 18K, arancio chiaro per Boss One K12 e Huracán 3K, tre grigi diversi per le racchette nere). Restano quelle già tono su tono: Boss One K3 (azzurro), Finder Pro Master K3 (rosa) e Huracán 12K (arancio).
+
+## Pagina prodotto Boss One K12 Pro Master 6.0 (20/10/2026)
+
+15 immagini in `assets/prodotto/`, generate con Higgsfield (gpt_image_2_5, 2k, 4:5) partendo dalle foto ufficiali del catalogo T91, con la stessa direzione artistica delle foto delle racchette: parete opaca tono su tono, luce diffusa, ombra morbida a sinistra, grana fine.
+
+| File | Uso |
+|---|---|
+| g2-tre-quarti, g3-profilo | Galleria: tre quarti e profilo del telaio |
+| g4-piatto, g5-gola, g6-impugnatura | Galleria e sezione tecnologia: dettagli di piatto, gola e impugnatura |
+| g7-azione | Galleria e blocco "La pala del n.1": giocatore in smash di sera (immagine sintetica) |
+| g8-set | Galleria e blocco "Cosa c'è nel mio borsone": racchetta, borsone, cappellino, overgrip |
+| a-borsone, a-cap, a-overgrip, a-copritesta | Set e "Spesso comprati insieme" |
+| a-tshirt, a-short, a-calza, a-zaino | "Completa il tuo look" |
+
+La prima immagine della galleria è `assets/racchette/boss-one-k12-pro-master.jpg`. Prodotti, grafiche e logo vanno verificati sul prodotto vero. Immagini sintetiche da sostituire con scatti reali prima del lancio.
+
+### Contenuti da confermare (dal mockup)
+
+I testi vengono da https://noknok-web.github.io/T91_F/T91_mockup_pagina_prodotto.html; la descrizione e i dati tecnici dal catalogo ufficiale. Da confermare con il cliente: valutazione 4,9 e 770 recensioni (le quattro recensioni mostrate sono d'esempio e riferite ad altri modelli), rate Klarna, prezzo T91 Club (-30%), ritiro a Osio Sotto (Click & Collect non ancora attivo), spedizione gratuita 24/48h e reso 30 giorni, il blocco "n.1 d'Italia" (nome dell'atleta e citazione da inserire), prezzi del set e dei prodotti abbinati, valori di potenza/controllo, video di 1:45 (non ancora prodotto), articoli del blog.

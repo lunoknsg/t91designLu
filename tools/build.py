@@ -146,10 +146,11 @@ def racchette():
     for i, (slug, name, handle, linea, carb, gioco, ed, new) in enumerate(RACKETS):
         sub = " &middot; ".join(x for x in (linea, carb) if x)
         badge = '<span class="new">Novit&agrave;</span>' if new else ""
-        url = f"https://t91padel.com/products/{handle}"
+        tb = "" if slug == "boss-one-k12-pro-master" else ' target="_blank" rel="noopener"'
+        url = "prodotto-boss-one-k12.html" if slug == "boss-one-k12-pro-master" else f"https://t91padel.com/products/{handle}"
         cards.append(f'''<li class="pc" data-name="{name.lower()}" data-linea="{linea}" data-carbonio="{carb}" data-gioco="{gioco}" data-edizione="{ed}" data-new="{1 if new else 0}" data-price="{PRICE}" data-i="{i}">
-<div class="pc-ph">{badge}<a class="pc-img" href="{url}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/racchette/{slug}.jpg" alt="" loading="{'eager' if i < 4 else 'lazy'}"></a><button class="pc-add" type="button" aria-label="Scegli il peso per {name}">Scegli il peso</button></div>
-<a class="pc-m" href="{url}" target="_blank" rel="noopener"><h2>{name}</h2><p class="pc-s">{sub}</p><p class="pc-p">Da &euro;{fmt_price(PRICE)}</p></a>
+<div class="pc-ph">{badge}<a class="pc-img" href="{url}" {tb} tabindex="-1" aria-hidden="true"><img src="assets/racchette/{slug}.jpg" alt="" loading="{'eager' if i < 4 else 'lazy'}"></a><button class="pc-add" type="button" aria-label="Scegli il peso per {name}">Scegli il peso</button></div>
+<a class="pc-m" href="{url}"{tb}><h2>{name}</h2><p class="pc-s">{sub}</p><p class="pc-p">Da &euro;{fmt_price(PRICE)}</p></a>
 </li>''')
     filters = (fgroup("linea", "Linea", ["Boss One", "Finder Pro", "Hurac&aacute;n"])
                + fgroup("carbonio", "Carbonio", ["3K", "12K", "18K"])
@@ -234,7 +235,7 @@ def home():
 <div class="prods">
 <a class="prod" href="#"><span class="new">Novit&agrave;</span><div class="ph"><img src="{IMG_HOLO}" alt="Racchetta HOLO" loading="lazy"></div><div class="meta"><span>Holo Collection</span><span>Da &euro;328,90</span></div></a>
 <a class="prod" href="racchette.html"><div class="ph"><img src="assets/racchette/huracan-power-full-black-iriart.jpg" alt="Hurac&aacute;n Power Full Black x Emiliano Iriart 3.0" loading="lazy"></div><div class="meta"><span>Hurac&aacute;n Power Full Black x Iriart 3.0</span><span>Da &euro;328,90</span></div></a>
-<a class="prod" href="racchette.html"><div class="ph"><img src="assets/racchette/boss-one-k12-pro-master.jpg" alt="Boss One K12 Pro Master 6.0" loading="lazy"></div><div class="meta"><span>Boss One K12 Pro Master</span><span>Da &euro;328,90</span></div></a>
+<a class="prod" href="prodotto-boss-one-k12.html"><div class="ph"><img src="assets/racchette/boss-one-k12-pro-master.jpg" alt="Boss One K12 Pro Master 6.0" loading="lazy"></div><div class="meta"><span>Boss One K12 Pro Master</span><span>Da &euro;328,90</span></div></a>
 </div>
 </section>
 
@@ -375,4 +376,8 @@ def garanzie():
 (ROOT / "servizi.html").write_text(servizi(), encoding="utf-8")
 (ROOT / "garanzie.html").write_text(garanzie(), encoding="utf-8")
 (ROOT / "racchette.html").write_text(racchette(), encoding="utf-8")
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import pdp
+(ROOT / "prodotto-boss-one-k12.html").write_text(pdp.render(head, header, footer, ARROW, VER), encoding="utf-8")
 print("ok")
