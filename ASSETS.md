@@ -54,3 +54,8 @@ I nomi, i prezzi ("Da €328,90") e i link alle schede vengono dal catalogo attu
 
 
 Aggiornamento: logo e immagini del cliente usate nel sito (logo T91, racchetta Holo, foto donna) sono ora copiate in `assets/ext/` e non più caricate da t91padel.com. Restano esterni solo i link alle schede prodotto del sito attuale.
+
+
+### Aggiornamento foto Racchette: sfondo luminoso (20/10/2026)
+
+Le 11 immagini in `assets/racchette/` sono state rigenerate con lo stesso procedimento ma con una direzione artistica più chiara, data da una foto di riferimento del cliente: parete colorata opaca e satura, luce diffusa high-key, ombra morbida a sinistra, racchetta appoggiata. Ogni racchetta ha un colore di parete diverso. Le versioni precedenti, con sfondi scuri e drammatici, non sono più nel progetto (restano nella cronologia di git).
