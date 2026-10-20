@@ -59,3 +59,7 @@ Aggiornamento: logo e immagini del cliente usate nel sito (logo T91, racchetta H
 ### Aggiornamento foto Racchette: sfondo luminoso (20/10/2026)
 
 Le 11 immagini in `assets/racchette/` sono state rigenerate con lo stesso procedimento ma con una direzione artistica più chiara, data da una foto di riferimento del cliente: parete colorata opaca e satura, luce diffusa high-key, ombra morbida a sinistra, racchetta appoggiata. Ogni racchetta ha un colore di parete diverso. Le versioni precedenti, con sfondi scuri e drammatici, non sono più nel progetto (restano nella cronologia di git).
+
+### Aggiornamento sfondi tono su tono (20/10/2026)
+
+Su richiesta, 8 delle 11 immagini in `assets/racchette/` sono state rigenerate con la parete nella stessa famiglia di colore della racchetta, in tinta più chiara (giallino per Finder Pro K12 Master 5.0, lilla chiaro per Finder Pro K12 3.0 PWR, lavanda per Boss One 18K, arancio chiaro per Boss One K12 e Huracán 3K, tre grigi diversi per le racchette nere). Restano quelle già tono su tono: Boss One K3 (azzurro), Finder Pro Master K3 (rosa) e Huracán 12K (arancio).
