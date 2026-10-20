@@ -169,13 +169,18 @@ def render(head, header, footer, arrow, ver):
 
 <section class="pdp" aria-labelledby="pdp-h">
 <div class="gal" id="gal" data-g="{gdata}">
-<div class="thumbs" id="thumbs">{thumbs}</div>
 <div class="stage" id="stage">
 <span class="bdg"><i>Novit&agrave;</i><i class="k">Holo</i></span>
 <img id="gmain" src="{GALLERY[0][0]}" alt="{GALLERY[0][1]}">
 <button type="button" class="gn prev" id="gprev" aria-label="Immagine precedente">{ICON["prev"]}</button>
 <button type="button" class="gn next" id="gnext" aria-label="Immagine successiva">{ICON["next"]}</button>
-<span class="gcount" id="gcount" aria-live="polite">1 / {len(GALLERY)}</span>
+<button type="button" class="gplay" id="gplay" aria-pressed="false" aria-label="Metti in pausa lo scorrimento automatico"><span class="pi" aria-hidden="true"></span></button>
+<span class="gcount" id="gcount" aria-live="off">1 / {len(GALLERY)}</span>
+</div>
+<div class="thr">
+<button type="button" class="tn" id="tprev" aria-label="Scorri le miniature a sinistra">{ICON["prev"]}</button>
+<div class="thumbs" id="thumbs" tabindex="-1">{thumbs}</div>
+<button type="button" class="tn" id="tnext" aria-label="Scorri le miniature a destra">{ICON["next"]}</button>
 </div>
 </div>
 
@@ -184,7 +189,7 @@ def render(head, header, footer, arrow, ver):
 <h1 id="pdp-h" class="d d-l">Boss One K12<br>Pro Master 6.0</h1>
 <p class="lede">Per chi gioca per chiudere il punto: carbonio 12K, bilanciamento alto, smash esplosivi.</p>
 <div class="price"><span class="now" id="price" data-base="{PRICE}">{eur(PRICE)}</span><span class="klarna" id="klarna">oppure 3 rate da &euro;109,63 senza interessi con Klarna</span></div>
-<p class="club">T91 Club: la pagheresti <b id="club">&euro;230,23</b></p>
+<a class="clubbox" href="#"><span class="cl-k"><i aria-hidden="true"></i>T91 Club</span><span class="cl-p"><small>La pagheresti</small><b id="club">&euro;230,23</b></span><span class="cl-s">-30% sempre {A}</span></a>
 
 <fieldset class="opt"><legend>Colore</legend>
 <div class="sw"><span class="dot" aria-hidden="true"></span><b>Arancione Holo</b><a href="racchette.html">Altri modelli Holo</a></div>
@@ -249,7 +254,7 @@ def render(head, header, footer, arrow, ver):
 </div>
 </section>
 
-<section class="wrap tech" aria-labelledby="tech-h">
+<section class="band" aria-labelledby="tech-h"><div class="wrap tech">
 <div class="tech-i"><img src="assets/prodotto/g4-piatto.jpg" alt="Dettaglio del piatto sabbiato in carbonio 12K" loading="lazy"></div>
 <div class="tech-t">
 <h2 id="tech-h" class="d d-l">Dentro la Boss One.</h2>
@@ -259,7 +264,7 @@ def render(head, header, footer, arrow, ver):
 <p>Il peso di 356-365 g e il bilanciamento alto di 26,3-27,2 cm spostano la massa verso la testa della racchetta, per una spinta superiore in smash, v&iacute;bora e colpi di chiusura: la scelta per giocatori esperti che non accettano compromessi.</p>
 </div>
 </div>
-</section>
+</div></section>
 
 <section class="wrap vid" aria-labelledby="vid-h">
 <h2 id="vid-h" class="d d-m">3 cose da sapere sulla Boss One K12</h2>
@@ -285,7 +290,7 @@ def render(head, header, footer, arrow, ver):
 </div>
 </section>
 
-<section class="wrap bag" aria-labelledby="bag-h">
+<section class="band" aria-labelledby="bag-h"><div class="wrap bag">
 <div class="bag-i"><img src="assets/prodotto/g8-set.jpg" alt="Racchetta, borsone, cappellino e overgrip T91 su sfondo albicocca" loading="lazy"></div>
 <div class="bag-t">
 <h2 id="bag-h" class="d d-l">Cosa c'&egrave; nel mio borsone</h2>
@@ -293,7 +298,7 @@ def render(head, header, footer, arrow, ver):
 <div class="settot"><span class="old">{eur(set_total)}</span><b>{eur(round(set_total * 0.9, 2))}</b><span class="tag">Set -10%</span></div>
 <button type="button" class="btn solid" id="addset">Acquista il set {A}</button>
 </div>
-</section>
+</div></section>
 
 <section class="wrap tgs" aria-labelledby="tg-h">
 <h2 id="tg-h" class="d d-m">Spesso comprati insieme</h2>
@@ -335,7 +340,7 @@ def render(head, header, footer, arrow, ver):
 </section>
 
 <div class="sbar" id="sbar" aria-hidden="true">
-<div class="sbar-t"><b>{NAME}</b><span id="sprice">{eur(PRICE)}</span><span class="mut">&middot; 3 rate Klarna</span></div>
+<div class="sbar-t"><b>{NAME}</b><span id="sprice">{eur(PRICE)}</span><span class="sclub">Club <b id="sclub">&euro;230,23</b></span></div>
 <button type="button" class="btn solid" id="sadd" tabindex="-1">Aggiungi</button>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>

@@ -41,7 +41,7 @@ def head(title, desc):
 </head>
 <body>
 <a class="skip" href="#main">Vai ai contenuti</a>
-<div class="strip"><span>Spedizione in tutto il mondo</span><span>From Players to players</span></div>
+<div class="strip"><span>Spedizione in tutto il mondo</span><span class="su"><a href="#">Outlet</a><a href="#">Buoni regalo</a><a href="index.html#centri">Trova T91 vicino a te</a></span></div>
 """
 
 
@@ -54,11 +54,13 @@ def header(cur):
 <nav class="main" aria-label="Principale">
 {a("racchette.html","Racchette","racchette")}
 {a("index.html#shop","Abbigliamento","app")}
+{a("#","Accessori","acc")}
+{a("#","Team","team")}
 {a("servizi.html","Servizi","servizi")}
-{a("garanzie.html","Garanzie","garanzie")}
-{a("index.html#centri","Trova T91","centri")}
+{a("#","Blog","blog")}
+<a class="club-btn" href="#">T91 Club</a>
 </nav>
-<details class="mnav"><summary aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></summary><div class="mpanel">{a("racchette.html","Racchette","racchette")}{a("index.html#shop","Abbigliamento","app")}{a("servizi.html","Servizi","servizi")}{a("garanzie.html","Garanzie","garanzie")}{a("index.html#centri","Trova T91","centri")}</div></details>
+<details class="mnav"><summary aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></summary><div class="mpanel">{a("racchette.html","Racchette","racchette")}{a("index.html#shop","Abbigliamento","app")}{a("#","Accessori","acc")}{a("#","Team","team")}{a("servizi.html","Servizi","servizi")}{a("garanzie.html","Garanzie","garanzie")}{a("#","Blog","blog")}{a("index.html#centri","Trova T91","centri")}<a class="club-btn mclub" href="#">T91 Club</a></div></details>
 <div class="hdr-r"><a href="#">Accesso</a><a href="#">Cerca</a><a href="#">Carrello (0)</a></div>
 </div></header>
 <main id="main">
@@ -66,15 +68,19 @@ def header(cur):
 
 
 def footer():
+    pay = "".join(f'<li>{n}</li>' for n in ("VISA", "MASTERCARD", "AMEX", "PAYPAL", "APPLE PAY", "Klarna."))
     return f"""</main>
 <footer>
 <div class="cols">
-<div><a class="logo" href="index.html" aria-label="T91 Padel, home"><img class="inv" src="{LOGO}" alt="T91" width="96" height="76"></a><p style="margin-top:14px;max-width:30ch;color:#b4b3ad">From Players to players.</p></div>
-<div><h3>Shop</h3><ul><li><a href="racchette.html">Racchette</a></li><li><a href="index.html#shop">Abbigliamento</a></li><li><a href="#">Buoni regalo</a></li></ul></div>
-<div><h3>Servizi</h3><ul><li><a href="servizi.html#care">Care / Repair</a></li><li><a href="servizi.html#personalizzazione">Personalizzazione</a></li><li><a href="garanzie.html">Garanzie</a></li><li><a href="servizi.html#experience">Experience</a></li></ul></div>
-<div><h3>Rete</h3><ul><li><a href="index.html#centri">Trova T91</a></li><li><a href="#">Programma centri</a></li><li><a href="#">Programma maestri</a></li><li><a href="#">Ambassador</a></li></ul></div>
+<div class="fb"><a class="logo" href="index.html" aria-label="T91 Padel, home"><img class="inv" src="{LOGO}" alt="T91" width="96" height="76"></a><p>From Players to players.</p></div>
+<div><h3>Shop</h3><ul><li><a href="racchette.html">Racchette</a></li><li><a href="index.html#shop">Abbigliamento</a></li><li><a href="#">Accessori</a></li><li><a href="#">Outlet</a></li><li><a href="#">Mystery Box</a></li></ul></div>
+<div><h3>Team</h3><ul><li><a href="#">Team Pro</a></li><li><a href="#">Ambassador</a></li><li><a href="#">Team Under</a></li><li><a href="#">Blog</a></li></ul></div>
+<div><h3>Servizi</h3><ul><li><a href="servizi.html#care">T91 Care</a></li><li><a href="servizi.html#care">T91 Repair</a></li><li><a href="garanzie.html">Protezione</a></li><li><a href="servizi.html#personalizzazione">Personalizza</a></li><li><a href="servizi.html#click-collect">Click &amp; Collect</a></li></ul></div>
+<div><h3>T91</h3><ul><li><a href="#">Chi siamo</a></li><li><a href="index.html#centri">Centri e maestri</a></li><li><a href="index.html#centri">Trova T91 vicino a te</a></li><li><a href="#">Assistenza</a></li><li><a href="#">Spedizioni e resi</a></li></ul></div>
 </div>
-<div class="base"><span>Prototipo di design. Foto di campagna generate con IA per il prototipo, da sostituire con uno shooting reale; altre immagini dal sito attuale t91padel.com. Testi dei servizi in bozza da validare.</span><span>&copy; T91 Padel</span></div>
+<ul class="pay" aria-label="Metodi di pagamento">{pay}</ul>
+<div class="base"><span>T91 Padel &middot; Osio Sotto (BG) &middot; From players to players &middot; IT &middot; EN</span><span>&copy; T91 Padel</span></div>
+<p class="proto">Prototipo di design. Foto di campagna e di prodotto generate con IA, da sostituire con uno shooting reale. Testi dei servizi e dati del mockup in bozza da validare.</p>
 </footer>
 <script src="js/t91.js?v={VER}"></script>
 </body>
@@ -110,84 +116,6 @@ CENTRES = [
     ("The Padel Lab", "Biasca, Svizzera"),
     ("Padel Seasons", "Monaco di Baviera, Germania"),
 ]
-
-RACKETS = [
-    # slug, nome, handle, linea, carbonio, gioco, edizione, novita
-    ("finder-pro-master-k3", "Finder Pro Master K3", "finder-pro-master-k3", "Finder Pro", "3K", "Controllo", "Master", True),
-    ("boss-one-k3-pro-master", "Boss One K3 Pro Master", "boss-one-k3-pro-master", "Boss One", "3K", "Potenza", "Master", True),
-    ("boss-one-k12-pro-master", "Boss One K12 Pro Master 6.0", "boss-one-k12-pro-master-6-0", "Boss One", "12K", "Potenza", "Master", True),
-    ("huracan-power-full-black-iriart", "Hurac&aacute;n Power Full Black x Emiliano Iriart 3.0", "huracan-power-full-black-x-emiliano-iriart-3-0", "Hurac&aacute;n", "", "Potenza", "Con atleta", False),
-    ("huracan-12k-bubu", "Hurac&aacute;n 2.0 12K x Bubu Salandro", "huracan-2-0-12k-x-bubu-salandro", "Hurac&aacute;n", "12K", "Potenza", "Con atleta", False),
-    ("huracan-3k-bubu", "Hurac&aacute;n 2.0 3K x Bubu Salandro", "huracan-2-0-x-bubu-salandro", "Hurac&aacute;n", "3K", "Potenza", "Con atleta", False),
-    ("finder-pro-k12-master", "Finder Pro K12 Master 5.0", "finder-pro-k12-master-5-0", "Finder Pro", "12K", "", "Master", False),
-    ("huracan-2-0", "Hurac&aacute;n 2.0", "huracan-2-0", "Hurac&aacute;n", "", "Potenza", "Standard", False),
-    ("boss-one-18k-pwr", "Boss One 18K 3.0 PWR", "boss-one-18k-3-0-pwr", "Boss One", "18K", "Potenza", "Standard", False),
-    ("boss-one-12k-pwr", "Boss One 12K 3.0 PWR", "boss-one-12k-3-0-x-nick-remedi", "Boss One", "12K", "Potenza", "Con atleta", False),
-    ("finder-pro-k12-pwr", "Finder Pro K12 3.0 PWR", "finder-pro-k12-3-0-pwr", "Finder Pro", "12K", "Potenza", "Standard", False),
-]
-PRICE = 328.9
-
-
-def fmt_price(v):
-    return ("%.2f" % v).replace(".", ",")
-
-
-def fgroup(key, title, values):
-    items = []
-    for v in values:
-        n = sum(1 for r in RACKETS if {"linea": r[3], "carbonio": r[4], "gioco": r[5], "edizione": r[6]}[key] == v)
-        vid = f"f-{key}-{v.lower().replace(' ', '-').replace('&aacute;', 'a').replace('k', 'k')}"
-        items.append(f'<label class="chk" for="{vid}"><input type="checkbox" id="{vid}" data-k="{key}" value="{v}"><span class="box" aria-hidden="true"></span><span class="lab">{v}</span><span class="n">{n}</span></label>')
-    return f'<fieldset class="fg"><legend>{title}</legend>{"".join(items)}</fieldset>'
-
-
-def racchette():
-    cards = []
-    for i, (slug, name, handle, linea, carb, gioco, ed, new) in enumerate(RACKETS):
-        sub = " &middot; ".join(x for x in (linea, carb) if x)
-        badge = '<span class="new">Novit&agrave;</span>' if new else ""
-        tb = "" if slug == "boss-one-k12-pro-master" else ' target="_blank" rel="noopener"'
-        url = "prodotto-boss-one-k12.html" if slug == "boss-one-k12-pro-master" else f"https://t91padel.com/products/{handle}"
-        cards.append(f'''<li class="pc" data-name="{name.lower()}" data-linea="{linea}" data-carbonio="{carb}" data-gioco="{gioco}" data-edizione="{ed}" data-new="{1 if new else 0}" data-price="{PRICE}" data-i="{i}">
-<div class="pc-ph">{badge}<a class="pc-img" href="{url}" {tb} tabindex="-1" aria-hidden="true"><img src="assets/racchette/{slug}.jpg" alt="" loading="{'eager' if i < 4 else 'lazy'}"></a><button class="pc-add" type="button" aria-label="Scegli il peso per {name}">Scegli il peso</button></div>
-<a class="pc-m" href="{url}"{tb}><h2>{name}</h2><p class="pc-s">{sub}</p><p class="pc-p">Da &euro;{fmt_price(PRICE)}</p></a>
-</li>''')
-    filters = (fgroup("linea", "Linea", ["Boss One", "Finder Pro", "Hurac&aacute;n"])
-               + fgroup("carbonio", "Carbonio", ["3K", "12K", "18K"])
-               + fgroup("gioco", "Gioco", ["Potenza", "Controllo"])
-               + fgroup("edizione", "Edizione", ["Master", "Con atleta", "Standard"]))
-    return head("Racchette | T91 Padel", "Tutte le racchette da padel T91: Boss One, Finder Pro, Hurac&aacute;n. Filtra per linea, carbonio e gioco.") + header("racchette") + f"""
-<div class="wrap">
-<nav class="crumb" aria-label="Percorso"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Racchette</span></nav>
-<div class="plp-h">
-<h1 class="d d-l">Racchette</h1>
-<p class="plp-c" id="count" aria-live="polite">{len(RACKETS)} prodotti</p>
-</div>
-<div class="plp-bar">
-<button class="fbtn" type="button" id="fbtn" aria-expanded="false" aria-controls="filters">Filtri</button>
-<div class="chips" id="chips" aria-label="Filtri attivi"></div>
-<label class="sort" for="sort"><span>Ordina per</span>
-<select id="sort"><option value="i">In evidenza</option><option value="new">Novit&agrave;</option><option value="az">Nome A-Z</option><option value="pa">Prezzo crescente</option><option value="pd">Prezzo decrescente</option></select></label>
-</div>
-<div class="plp">
-<form class="filters" id="filters" aria-label="Filtri">{filters}<button class="reset" type="button" id="reset">Azzera filtri</button></form>
-<div class="plp-r">
-<ul class="pgrid" id="pgrid">
-{"".join(cards)}
-</ul>
-<p class="plp-e" id="empty" hidden>Nessuna racchetta con questi filtri. <button class="reset inl" type="button" id="reset2">Azzera i filtri</button></p>
-</div>
-</div>
-</div>
-
-<section class="assure wrap" aria-label="Servizi">
-<a href="servizi.html#personalizzazione"><b>Personalizzazione</b><span>Anche per un solo pezzo.</span></a>
-<a href="garanzie.html"><b>Garanzie</b><span>Tre formule di protezione.</span></a>
-<a href="servizi.html#care"><b>T91 Care</b><span>Riparazione, anche di altri marchi.</span></a>
-<a href="index.html#centri"><b>70 centri</b><span>Provale dove giochi.</span></a>
-</section>
-""" + footer()
-
 
 def home():
     centres = "\n".join(
@@ -375,9 +303,9 @@ def garanzie():
 (ROOT / "index.html").write_text(home(), encoding="utf-8")
 (ROOT / "servizi.html").write_text(servizi(), encoding="utf-8")
 (ROOT / "garanzie.html").write_text(garanzie(), encoding="utf-8")
-(ROOT / "racchette.html").write_text(racchette(), encoding="utf-8")
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import pdp
+import pdp, plp
+(ROOT / "racchette.html").write_text(plp.render(head, header, footer, ARROW, VER), encoding="utf-8")
 (ROOT / "prodotto-boss-one-k12.html").write_text(pdp.render(head, header, footer, ARROW, VER), encoding="utf-8")
 print("ok")
