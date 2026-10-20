@@ -45,3 +45,9 @@ Rigenerate con Higgsfield usando come riferimento i capi e gli ambienti veri for
 | assets/campaign/v2-g2.jpg | Griglia tile 2 | Donna con abito lilla T91, borsone arancione T91, racchetta Holo, panca e serranda |
 | assets/campaign/v2-g3.jpg | Griglia tile 3 | Uomo con felpa e pantaloncini oliva T91 su panca nera |
 Capi e borsone sono riprodotti dall'IA a partire dai riferimenti: controllare fedeltà di logo e dettagli prima della pubblicazione.
+
+## Foto prodotto della pagina Racchette (20/10/2026)
+
+11 immagini in `assets/racchette/`, generate con Higgsfield (gpt_image_2_5, 2k, 4:5). Ogni racchetta è stata ricostruita a partire dalla foto frontale ufficiale del catalogo T91 (t91padel.com), con luce, composizione e grana presi da un riferimento fornito dal cliente (racchetta appoggiata a una parete monocromatica, ombra lunga) e la parete nel colore della racchetta. Del riferimento non è stato riprodotto né il prodotto né alcun marchio.
+Sono immagini sintetiche di prototipo: grafica, logo e scritte stampate sulle racchette vanno verificati sul prodotto vero e le foto sostituite con scatti reali prima del lancio.
+I nomi, i prezzi ("Da €328,90") e i link alle schede vengono dal catalogo attuale del sito T91. I filtri Linea, Carbonio, Gioco ed Edizione sono dedotti da nomi e tag di quel catalogo.
