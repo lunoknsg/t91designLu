@@ -3,14 +3,15 @@
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+VER = __import__("time").strftime("%Y%m%d%H%M")
 CDN = "https://t91padel.com/cdn/shop/files/"
-IMG_HOLO = CDN + "Racchetta_HOLO_arancione_in_carbonio_pc.webp"
+IMG_HOLO = "assets/ext/Racchetta_HOLO_arancione_in_carbonio_pc.webp"
 IMG_HOLO_M = CDN + "Racchetta_HOLO_arancione_in_carbonio_cell.webp"
 IMG_IRIART = CDN + "IRIART_3_COVER_PC_a5cd421b-ba5d-4364-9af6-ef683e77ac0d.webp"
 IMG_BOSS = CDN + "BOSS_ONE_K12_5.0_COVER_PC_640x.webp"
-LOGO = CDN + "Logo_T91_Nero.svg?v=1698236978"
+LOGO = "assets/ext/Logo_T91_Nero.svg"
 CAMP = "assets/campaign/"
-IMG_DONNA = CDN + "Abbigliamento_Donna_Computer.webp"
+IMG_DONNA = "assets/ext/Abbigliamento_Donna_Computer.webp"
 
 ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg>'
 
@@ -36,7 +37,7 @@ def head(title, desc):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/t91.css">
+<link rel="stylesheet" href="css/t91.css?v={VER}">
 </head>
 <body>
 <a class="skip" href="#main">Vai ai contenuti</a>
@@ -75,7 +76,7 @@ def footer():
 </div>
 <div class="base"><span>Prototipo di design. Foto di campagna generate con IA per il prototipo, da sostituire con uno shooting reale; altre immagini dal sito attuale t91padel.com. Testi dei servizi in bozza da validare.</span><span>&copy; T91 Padel</span></div>
 </footer>
-<script src="js/t91.js"></script>
+<script src="js/t91.js?v={VER}"></script>
 </body>
 </html>
 """

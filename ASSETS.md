@@ -51,3 +51,6 @@ Capi e borsone sono riprodotti dall'IA a partire dai riferimenti: controllare fe
 11 immagini in `assets/racchette/`, generate con Higgsfield (gpt_image_2_5, 2k, 4:5). Ogni racchetta è stata ricostruita a partire dalla foto frontale ufficiale del catalogo T91 (t91padel.com), con luce, composizione e grana presi da un riferimento fornito dal cliente (racchetta appoggiata a una parete monocromatica, ombra lunga) e la parete nel colore della racchetta. Del riferimento non è stato riprodotto né il prodotto né alcun marchio.
 Sono immagini sintetiche di prototipo: grafica, logo e scritte stampate sulle racchette vanno verificati sul prodotto vero e le foto sostituite con scatti reali prima del lancio.
 I nomi, i prezzi ("Da €328,90") e i link alle schede vengono dal catalogo attuale del sito T91. I filtri Linea, Carbonio, Gioco ed Edizione sono dedotti da nomi e tag di quel catalogo.
+
+
+Aggiornamento: logo e immagini del cliente usate nel sito (logo T91, racchetta Holo, foto donna) sono ora copiate in `assets/ext/` e non più caricate da t91padel.com. Restano esterni solo i link alle schede prodotto del sito attuale.
