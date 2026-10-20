@@ -87,7 +87,7 @@ nav.main a:hover::after,nav.main a[aria-current="page"]::after{transform:scaleX(
 .row p{font-size:14px;color:var(--muted);max-width:40ch}
 .row .go{width:22px;height:22px;transition:transform .5s var(--ease)}
 .row:hover .go{transform:translateX(6px)}
-.tag{display:inline-block;font:600 10px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:5px 7px;border:1px solid currentColor;vertical-align:middle;margin-left:10px;position:relative;top:-3px}
+.tag{display:inline-block;font:600 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:5px 7px;border:1px solid currentColor;vertical-align:middle;margin-left:10px;position:relative;top:-3px}
 @media(max-width:900px){.svc{grid-template-columns:minmax(0,1fr)}.svc .head{position:static}.row{grid-template-columns:1fr auto}.row p{grid-column:1/2;grid-row:2}}
 
 /* product strip */
@@ -99,7 +99,7 @@ nav.main a:hover::after,nav.main a[aria-current="page"]::after{transform:scaleX(
 .prod img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .prod:hover img{transform:scale(1.035)}
 .prod .meta{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 2px 22px;font:500 12px/1.3 var(--body);letter-spacing:.06em;text-transform:uppercase;background:var(--paper)}
-.prod .new{position:absolute;top:12px;left:12px;background:var(--orange);color:var(--ink);font:700 10px/1 var(--body);letter-spacing:.12em;padding:6px 8px;text-transform:uppercase}
+.prod .new{position:absolute;top:12px;left:12px;background:var(--orange);color:var(--ink);font:700 11px/1 var(--body);letter-spacing:.12em;padding:6px 8px;text-transform:uppercase}
 @media(max-width:700px){.prods{grid-template-columns:1fr}}
 
 /* centres */
@@ -165,7 +165,7 @@ footer .base{max-width:1680px;margin:48px auto 0;padding-top:18px;border-top:1px
 .plans .pn{font:900 clamp(1.6rem,2.6vw,2.4rem)/.95 var(--display);text-transform:uppercase}
 .plans .pr{font:900 clamp(2.4rem,4.5vw,4rem)/.85 var(--display);font-variant-numeric:tabular-nums;white-space:nowrap}
 .plans .pr small{font-size:.45em;margin-left:2px}
-.todo{display:inline-block;font:600 10px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:#fff;padding:6px 8px}
+.todo{display:inline-block;font:600 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:#fff;padding:6px 8px}
 @media(max-width:800px){
   .plans thead{display:none}
   .plans tr{display:grid;gap:10px;padding:22px 0;border-bottom:1px solid var(--line)}
@@ -623,7 +623,7 @@ footer .proto{max-width:1680px;margin:14px auto 0;font-size:12px;color:#8f8e88}
 .new.k{background:var(--ink);color:#fff}
 .new.w{background:#fff;color:var(--ink)}
 .pc-tg{display:flex;gap:6px;flex-wrap:wrap}
-.pc-tg span{font:600 10px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;background:var(--stone);padding:6px 8px;color:var(--ink-2)}
+.pc-tg span{font:600 11px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;background:var(--stone);padding:6px 8px;color:var(--ink-2)}
 .pc-p small{display:block;font:400 12px/1.3 var(--body);color:var(--muted);margin-top:3px}
 .ban{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(8px,1.2vw,16px);margin-top:clamp(24px,4vw,48px)}
 .ban-g{position:relative;display:grid;align-content:end;min-height:340px;overflow:hidden;text-decoration:none;color:#fff;background:#111}
