@@ -71,9 +71,10 @@ def render(head, header, footer, arrow, ver):
         bd = f'<span class="{bcls}">{badge}</span>' if badge else ""
         cards += (f'<li class="pc" data-name="{attr(name).lower()}" data-lv="{lv}" data-st="{st}" data-co="{co}" data-li="{li}" data-k="{k}" data-w="{w}" '
                   f'data-new="{1 if badge == "Novit&agrave;" else 0}" data-price="{PRICE}" data-i="{i}" data-img="assets/racchette/{slug}.jpg" data-slug="{slug}">'
-                  f'<div class="pc-ph">{bd}<a class="pc-img" href="{url}"{tb} tabindex="-1" aria-hidden="true"><img src="assets/racchette/{slug}.jpg" alt="" loading="{"eager" if i < 4 else "lazy"}"></a>'
+                  f'<div class="pc-ph">{bd}<a class="pc-img" href="{url}"{tb} tabindex="-1" aria-hidden="true"><img src="assets/racchette/{slug}.jpg" alt="" loading="{"eager" if i < 4 else "lazy"}"></a></div>'
+                  f'<div class="pc-top"><p class="pc-tg"><span>{lv}</span><span>{st}</span></p>'
                   f'<button class="cmp" type="button" aria-pressed="false" aria-label="Confronta {attr(name)}"><i aria-hidden="true"></i>Confronta</button></div>'
-                  f'<a class="pc-m" href="{url}"{tb}><p class="pc-tg"><span>{lv}</span><span>{st}</span></p><h2>{name}</h2>'
+                  f'<a class="pc-m" href="{url}"{tb}><h2>{name}</h2>'
                   f'<p class="pc-p">{eur(PRICE)}<small>o 3 rate da &euro;109,63 con Klarna</small></p></a></li>')
     faq = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in FAQ)
 
