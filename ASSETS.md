@@ -86,3 +86,15 @@ I testi vengono da https://noknok-web.github.io/T91_F/T91_mockup_pagina_prodotto
 ### Fascia Mystery Box (21/10/2026)
 
 `assets/campaign/mystery-box.jpg`: generata con Higgsfield (gpt_image_2_5, 2k, 16:9) partendo dall'immagine della Mystery Box presa dalla home di t91padel.com (scatola nera con linea dorata luminosa). Ambientata su una panchina in legno a bordo di un campo da padel blu, al tramonto, con i riflettori. Immagine sintetica da sostituire con uno scatto reale. Il "60%" nel testo è quello indicato dal cliente; il sito attuale parla di sconti "fino al -60%" su listino, da verificare con T91 prima della pubblicazione.
+
+## Blog (21/10/2026)
+
+Pagine: `blog.html` e tre articoli (`articolo-*.html`), generati da `tools/blog.py`. Sono sintesi scritte con parole nostre di tre pubblicazioni esterne, **a solo scopo illustrativo per la presentazione al cliente**. Le tre foto in `assets/blog/` sono scaricate dalle stesse pubblicazioni: i diritti restano degli autori e vanno sostituite con foto proprie o con immagini licenziate prima di qualsiasi uso pubblico.
+
+| Articolo | Fonte | Foto |
+|---|---|---|
+| Il warm-up nel padel | https://www.padelisland.it/warm-up-nel-padel/ (Padel Island) | `warm-up.jpg`, dalla pagina dell'articolo |
+| Un Master da applausi: si chiude il GdB Padel Tour | https://www.giornaledibrescia.it/sport/altri-sport/match-spettacolari-festa-master-gdb-padel-tour-da-applausi-foto-bakrte7f (Giornale di Brescia) | `gdb-padel-tour.jpg`, foto Newreporter Papetti |
+| Premier Padel a Roma: nove giorni al Foro Italico | https://www.mrpadelpaddle.com/padel-italia/bnl-italy-major-premier-padel-9-giorni-intensi-di-padel/ (MrPadel Paddle) | `foro-italico.jpg`, foto A. Fioriti |
+
+Nota: l'articolo sul Foro Italico descrive il programma di un'edizione passata del torneo (date di luglio 2023); nell'articolo T91 le date non sono riportate.

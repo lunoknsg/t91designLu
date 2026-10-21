@@ -105,9 +105,9 @@ SERVICES = [
     ("Personalizza", "Anche 1 pezzo", "Il tuo nome sul completo.", "", "servizi.html#personalizzazione", "Inizia"),
 ]
 POSTS = [
-    ("Guide", "6 min", "Come scegliere la racchetta per il tuo livello"),
-    ("Novit&agrave;", "4 min", "Holo Collection: la nuova linea Master 6.0"),
-    ("Tornei", "3 min", "Il Team T91 nel weekend: i risultati"),
+    ("Guide", "5 min", "Il warm-up nel padel: come prepararsi prima di scendere in campo", "articolo-warm-up-nel-padel.html"),
+    ("Tornei", "4 min", "Un Master da applausi: si chiude il GdB Padel Tour", "articolo-gdb-padel-tour-master.html"),
+    ("Tornei", "3 min", "Premier Padel a Roma: nove giorni di padel al Foro Italico", "articolo-bnl-italy-major-premier-padel.html"),
 ]
 
 
@@ -161,7 +161,7 @@ def render(head, header, footer, arrow, ver):
         tg = '<span class="tag">' + tag + "</span>" if tag else ""
         services += f'<li><a href="{h}"><span class="sv-k">{k}</span><h3>{t}{tg}</h3><p>{d}</p><span class="sv-go">{cta} {A}</span></a></li>'
     chapters_html = chapters
-    posts = "".join(f'<li><a href="#"><span class="cap mut">{c} &middot; {m}</span><h3>{t}</h3></a></li>' for c, m, t in POSTS)
+    posts = "".join(f'<li><a href="{h}"><span class="cap mut">{c} &middot; {m}</span><h3>{t}</h3></a></li>' for c, m, t, h in POSTS)
 
     return head("Boss One K12 Pro Master 6.0 | T91 Padel", "Boss One K12 Pro Master 6.0: carbonio 12K, bilanciamento alto, piatto sabbiato. Per chi gioca per chiudere il punto.") + header("racchette") + f"""
 <div class="wrap">
@@ -335,7 +335,7 @@ def render(head, header, footer, arrow, ver):
 </section>
 
 <section class="wrap guides" aria-labelledby="bl-h">
-<div class="shop-h"><h2 id="bl-h" class="d d-m">Dal blog</h2><a class="btn line" href="#">Tutti gli articoli {A}</a></div>
+<div class="shop-h"><h2 id="bl-h" class="d d-m">Dal blog</h2><a class="btn line" href="blog.html">Tutti gli articoli {A}</a></div>
 <ul class="glist">{posts}</ul>
 </section>
 

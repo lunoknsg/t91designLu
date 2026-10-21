@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import plp
+import plp, blog
 VER = __import__("time").strftime("%Y%m%d%H%M")
 CDN = "https://t91padel.com/cdn/shop/files/"
 IMG_HOLO = "assets/ext/Racchetta_HOLO_arancione_in_carbonio_pc.webp"
@@ -56,14 +56,14 @@ def header(cur):
 <a class="logo" href="index.html" aria-label="T91 Padel, home"><img src="{LOGO}" alt="T91" width="64" height="51"></a>
 <nav class="main" aria-label="Principale">
 {a("racchette.html","Racchette","racchette")}
-{a("index.html#shop","Abbigliamento","app")}
+{a("#","Abbigliamento","app")}
 {a("#","Accessori","acc")}
 {a("#","Team","team")}
 {a("servizi.html","Servizi","servizi")}
-{a("#","Blog","blog")}
+{a("blog.html","Blog","blog")}
 <a class="club-btn" href="#">T91 Club</a>
 </nav>
-<details class="mnav"><summary aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></summary><div class="mpanel">{a("racchette.html","Racchette","racchette")}{a("index.html#shop","Abbigliamento","app")}{a("#","Accessori","acc")}{a("#","Team","team")}{a("servizi.html","Servizi","servizi")}{a("garanzie.html","Garanzie","garanzie")}{a("#","Blog","blog")}{a("index.html#centri","Trova T91","centri")}<a class="club-btn mclub" href="#">T91 Club</a></div></details>
+<details class="mnav"><summary aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></summary><div class="mpanel">{a("racchette.html","Racchette","racchette")}{a("#","Abbigliamento","app")}{a("#","Accessori","acc")}{a("#","Team","team")}{a("servizi.html","Servizi","servizi")}{a("garanzie.html","Garanzie","garanzie")}{a("blog.html","Blog","blog")}{a("index.html#centri","Trova T91","centri")}<a class="club-btn mclub" href="#">T91 Club</a></div></details>
 <div class="hdr-r"><a href="#">Accesso</a><a href="#">Cerca</a><a href="#">Carrello (0)</a></div>
 </div></header>
 <main id="main">
@@ -76,8 +76,8 @@ def footer():
 <footer>
 <div class="cols">
 <div class="fb"><a class="logo" href="index.html" aria-label="T91 Padel, home"><img class="inv" src="{LOGO}" alt="T91" width="96" height="76"></a><p>From Players to players.</p></div>
-<div><h3>Shop</h3><ul><li><a href="racchette.html">Racchette</a></li><li><a href="index.html#shop">Abbigliamento</a></li><li><a href="#">Accessori</a></li><li><a href="#">Outlet</a></li><li><a href="#">Mystery Box</a></li></ul></div>
-<div><h3>Team</h3><ul><li><a href="#">Team Pro</a></li><li><a href="#">Ambassador</a></li><li><a href="#">Team Under</a></li><li><a href="#">Blog</a></li></ul></div>
+<div><h3>Shop</h3><ul><li><a href="racchette.html">Racchette</a></li><li><a href="#">Abbigliamento</a></li><li><a href="#">Accessori</a></li><li><a href="#">Outlet</a></li><li><a href="#">Mystery Box</a></li></ul></div>
+<div><h3>Team</h3><ul><li><a href="#">Team Pro</a></li><li><a href="#">Ambassador</a></li><li><a href="#">Team Under</a></li><li><a href="blog.html">Blog</a></li></ul></div>
 <div><h3>Servizi</h3><ul><li><a href="servizi.html#care">T91 Care</a></li><li><a href="servizi.html#care">T91 Repair</a></li><li><a href="garanzie.html">Protezione</a></li><li><a href="servizi.html#personalizzazione">Personalizza</a></li><li><a href="servizi.html#click-collect">Click &amp; Collect</a></li></ul></div>
 <div><h3>T91</h3><ul><li><a href="#">Chi siamo</a></li><li><a href="index.html#centri">Centri e maestri</a></li><li><a href="index.html#centri">Trova T91 vicino a te</a></li><li><a href="#">Assistenza</a></li><li><a href="#">Spedizioni e resi</a></li></ul></div>
 </div>
@@ -147,7 +147,7 @@ def home():
 <div class="in">
 <h1 id="h1" class="d d-l">Holo.<br>Poi tutto il resto.</h1>
 <p class="sub">La racchetta &egrave; l'inizio. Dopo ci sono la riparazione, la personalizzazione, le garanzie e 70 centri dove provarla.</p>
-<div class="btns"><a class="btn solid" href="#shop">Acquista Holo {ARROW}</a><a class="btn line" href="#servizi">Scopri i servizi {ARROW}</a></div>
+<div class="btns"><a class="btn solid" href="racchette.html">Acquista Holo {ARROW}</a><a class="btn line" href="#servizi">Scopri i servizi {ARROW}</a></div>
 </div>
 <span class="synth">Immagine generata con IA &middot; prototipo</span>
 </section>
@@ -158,10 +158,10 @@ def home():
 </section>
 
 <section class="lb" aria-label="Campagna">
-<a href="#shop" class="lb-i"><img src="{CAMP}v2-g1.jpg" alt="Giocatrice in top e leggings verde salvia T91 cammina tra i campi da padel, racchetta Holo in mano" loading="lazy"><span class="lb-c"><b>Donna. In movimento.</b><i class="pill">Donna</i></span></a>
-<a href="#shop" class="lb-i"><img src="{CAMP}v2-g2.jpg" alt="Giocatrice con abito lilla T91 appoggiata a una panca, borsone arancione T91 e racchetta Holo accanto" loading="lazy"><span class="lb-c"><b>Donna. Dopo il campo.</b><i class="pill">Donna</i></span></a>
-<a href="#shop" class="lb-i"><img src="{CAMP}v2-g3.jpg" alt="Giocatore con felpa e pantaloncini oliva T91 disteso su una panca nera lancia una pallina" loading="lazy"><span class="lb-c"><b>Uomo. Prima del punto.</b><i class="pill">Uomo</i></span></a>
-<a href="#shop" class="lb-i"><img src="{CAMP}lookbook-g4.jpg" alt="Giocatore in t-shirt T91 in uno smash su sfondo di luce blu, racchetta Holo" loading="lazy"><span class="lb-c"><b>Uomo. Smash.</b><i class="pill">Racchette</i></span></a>
+<a href="racchette.html" class="lb-i"><img src="{CAMP}v2-g1.jpg" alt="Giocatrice in top e leggings verde salvia T91 cammina tra i campi da padel, racchetta Holo in mano" loading="lazy"><span class="lb-c"><b>Donna. In movimento.</b><i class="pill">Donna</i></span></a>
+<a href="racchette.html" class="lb-i"><img src="{CAMP}v2-g2.jpg" alt="Giocatrice con abito lilla T91 appoggiata a una panca, borsone arancione T91 e racchetta Holo accanto" loading="lazy"><span class="lb-c"><b>Donna. Dopo il campo.</b><i class="pill">Donna</i></span></a>
+<a href="racchette.html" class="lb-i"><img src="{CAMP}v2-g3.jpg" alt="Giocatore con felpa e pantaloncini oliva T91 disteso su una panca nera lancia una pallina" loading="lazy"><span class="lb-c"><b>Uomo. Prima del punto.</b><i class="pill">Uomo</i></span></a>
+<a href="racchette.html" class="lb-i"><img src="{CAMP}lookbook-g4.jpg" alt="Giocatore in t-shirt T91 in uno smash su sfondo di luce blu, racchetta Holo" loading="lazy"><span class="lb-c"><b>Uomo. Smash.</b><i class="pill">Racchette</i></span></a>
 </section>
 
 <div class="wrap">
@@ -190,13 +190,9 @@ def home():
 <div class="feat-txt"><h2 id="ft-h" class="d d-l">Una racchetta si cura.</h2><p class="lede">T91 Care ripara le racchette, anche di altri marchi. Non buttare quella che ami.</p><div class="btns"><a class="btn ink" href="servizi.html#care">T91 Care / Repair {ARROW}</a></div></div>
 </section>
 
-<section class="shop wrap" id="shop" aria-labelledby="sh-h">
-<div class="shop-h"><h2 id="sh-h" class="d d-m">Racchette</h2><a class="btn line" href="racchette.html">Vedi tutte {ARROW}</a></div>
-<div class="prods">
-<a class="prod" href="#"><span class="new">Novit&agrave;</span><div class="ph"><img src="{IMG_HOLO}" alt="Racchetta HOLO" loading="lazy"></div><div class="meta"><span>Holo Collection</span><span>Da &euro;328,90</span></div></a>
-<a class="prod" href="racchette.html"><div class="ph"><img src="assets/racchette/huracan-power-full-black-iriart.jpg" alt="Hurac&aacute;n Power Full Black x Emiliano Iriart 3.0" loading="lazy"></div><div class="meta"><span>Hurac&aacute;n Power Full Black x Iriart 3.0</span><span>Da &euro;328,90</span></div></a>
-<a class="prod" href="prodotto-boss-one-k12.html"><div class="ph"><img src="assets/racchette/boss-one-k12-pro-master.jpg" alt="Boss One K12 Pro Master 6.0" loading="lazy"></div><div class="meta"><span>Boss One K12 Pro Master</span><span>Da &euro;328,90</span></div></a>
-</div>
+<section class="wrap blogh" id="blog" aria-labelledby="bl-h">
+<div class="shop-h"><h2 id="bl-h" class="d d-l">Dal blog</h2><a class="btn line" href="blog.html">Tutti gli articoli {ARROW}</a></div>
+<ul class="bgrid three">{"".join(blog.card(p) for p in blog.POSTS)}</ul>
 </section>
 
 <section class="dark" id="centri" aria-labelledby="c-h">
@@ -227,14 +223,7 @@ def home():
 </div>
 </section>
 
-<section class="guides wrap" aria-labelledby="g-h">
-<h2 id="g-h" class="d d-m">Guide</h2>
-<div class="glist">
-<a href="#"><h3>Quale racchetta fa per te</h3><span class="mut">Il quiz per scegliere la racchetta.</span></a>
-<a href="#"><h3>Quando far riparare una racchetta</h3><span class="mut">Segnali da non ignorare.</span></a>
-<a href="#"><h3>Quale garanzia scegliere</h3><span class="mut">Le formule di protezione.</span></a>
-</div>
-</section>
+
 """ + footer()
 
 
@@ -338,6 +327,9 @@ def garanzie():
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import pdp, plp
+(ROOT / "blog.html").write_text(blog.render_list(head, header, footer, ARROW, VER), encoding="utf-8")
+for _p in blog.POSTS:
+    (ROOT / _p["file"]).write_text(blog.render_article(_p, head, header, footer, ARROW, VER), encoding="utf-8")
 (ROOT / "racchette.html").write_text(plp.render(head, header, footer, ARROW, VER), encoding="utf-8")
 (ROOT / "prodotto-boss-one-k12.html").write_text(pdp.render(head, header, footer, ARROW, VER), encoding="utf-8")
 print("ok")
