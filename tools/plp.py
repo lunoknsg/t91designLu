@@ -115,7 +115,7 @@ def render(head, header, footer, arrow, ver):
 </section>
 </div>
 
-<section class="dark quiz" aria-labelledby="qz-h">
+<section class="dark quiz" id="test" aria-labelledby="qz-h">
 <div class="wrap quizin">
 <div><h2 id="qz-h" class="d d-l">Trova la tua racchetta.</h2><p class="lede mut">Fai il test in 60 secondi e ricevi il risultato su WhatsApp.</p></div>
 <form class="qf" id="qf"><label for="wa" class="cap">Il tuo numero WhatsApp</label><div class="qr"><input id="wa" type="tel" inputmode="tel" autocomplete="tel" placeholder="+39 ..."><button class="btn solid" type="submit">Inizia {A}</button></div></form>

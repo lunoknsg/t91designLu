@@ -153,7 +153,8 @@ def home():
 </section>
 
 <section class="best wrap" aria-labelledby="best-h">
-<div class="best-t"><h2 id="best-h" class="d d-l">Le pi&ugrave;<br>acquistate</h2><a class="btn line" href="racchette.html">Tutte le racchette {ARROW}</a></div>
+<div class="best-t"><h2 id="best-h" class="d d-l">Le pi&ugrave;<br>acquistate</h2><a class="btn line" href="racchette.html">Tutte le racchette {ARROW}</a>
+<div class="best-q"><h3>Vuoi sapere quale racchetta fa per te?</h3><a class="btn ink" href="racchette.html#test">Ti aiutiamo noi {ARROW}</a></div></div>
 <ul class="best-l">{best_cards()}</ul>
 </section>
 
