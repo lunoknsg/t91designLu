@@ -106,3 +106,5 @@ La fascia "Trova T91 vicino a te" in home usa Leaflet 1.9.4 (`assets/vendor/`, l
 ### Foto fascia "From Players to players" (21/10/2026)
 
 `assets/campaign/iriart-salandro.jpg`: fotografia fornita dal cliente (file `20260531_Emiliano_Martin_Iriart_Mauro_Agustin_Salandro_ZAF_2401.JPG`, evento BNL Italy Major Premier Padel 2026) con Emiliano Iriart e Bubu Salandro. Sostituisce la foto precedente. Diritti e liberatorie vanno confermati con T91 e con il fotografo prima di un uso pubblico.
+
+Dettaglio della mappa (21/10/2026): confini delle regioni e delle province italiane da openpolis/geojson-italy (dati ISTAT, semplificati in `assets/it-regioni.geo.json` e `assets/it-province.geo.json`). Nomi di paesi, mari e città (circa 80) scritti a mano in `js/centri.js`, mostrati in base al livello di zoom: paesi e grandi città da lontano, regioni da zoom 6, province da zoom 7.
