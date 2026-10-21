@@ -3,6 +3,9 @@
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import plp
 VER = __import__("time").strftime("%Y%m%d%H%M")
 CDN = "https://t91padel.com/cdn/shop/files/"
 IMG_HOLO = "assets/ext/Racchetta_HOLO_arancione_in_carbonio_pc.webp"
@@ -117,6 +120,22 @@ CENTRES = [
     ("Padel Seasons", "Monaco di Baviera, Germania"),
 ]
 
+def best_cards():
+    by = {r[0]: r for r in plp.RACKETS}
+    out = ""
+    for slug in ("huracan-2-0", "boss-one-k12-pro-master", "finder-pro-master-k3"):
+        _s, name, handle, li, lv, st, co, badge, k, w = by[slug]
+        internal = slug == "boss-one-k12-pro-master"
+        url = "prodotto-boss-one-k12.html" if internal else f"https://t91padel.com/products/{handle}"
+        tb = "" if internal else ' target="_blank" rel="noopener"'
+        bcls = "new w" if badge == "Bestseller" else "new"
+        bd = f'<span class="{bcls}">{badge}</span>' if badge else ""
+        out += (f'<li class="pc"><div class="pc-ph">{bd}<a class="pc-img" href="{url}"{tb} tabindex="-1" aria-hidden="true"><img src="assets/racchette/{slug}.jpg" alt="" loading="lazy"></a></div>'
+                f'<div class="pc-top"><p class="pc-tg"><span>{lv}</span><span>{st}</span></p></div>'
+                f'<a class="pc-m" href="{url}"{tb}><h3>{name}</h3><p class="pc-p">&euro;328,90<small>o 3 rate da &euro;109,63 con Klarna</small></p></a></li>')
+    return out
+
+
 def home():
     centres = "\n".join(
         f'<li data-s="{n.lower()} {c.lower()}"><div><b>{n}</b><br><span>{c}</span></div><a href="#" aria-label="Indicazioni per {n}">Indicazioni</a></li>'
@@ -131,6 +150,11 @@ def home():
 <div class="btns"><a class="btn solid" href="#shop">Acquista Holo {ARROW}</a><a class="btn line" href="#servizi">Scopri i servizi {ARROW}</a></div>
 </div>
 <span class="synth">Immagine generata con IA &middot; prototipo</span>
+</section>
+
+<section class="best wrap" aria-labelledby="best-h">
+<div class="best-t"><h2 id="best-h" class="d d-l">Le pi&ugrave;<br>acquistate</h2><a class="btn line" href="racchette.html">Tutte le racchette {ARROW}</a></div>
+<ul class="best-l">{best_cards()}</ul>
 </section>
 
 <section class="lb" aria-label="Campagna">

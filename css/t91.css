@@ -726,3 +726,17 @@ footer .proto{max-width:1680px;margin:14px auto 0;font-size:12px;color:#8f8e88}
 .pc-top .cmp[aria-pressed="true"] i::after{content:"";width:8px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
 .pc-top .cmp:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 .pc .pc-m{padding-top:10px}
+
+/* ---------- Home: le più acquistate ---------- */
+.best{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,3fr);gap:clamp(20px,3vw,48px);padding-block:clamp(48px,7vw,96px);align-items:start}
+.best-t{display:grid;gap:24px;justify-items:start;align-content:start}
+.best-l{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(8px,1.2vw,16px)}
+.best .pc-m h3{font:900 clamp(1.25rem,1.7vw,1.55rem)/1 var(--display);text-transform:uppercase;text-wrap:balance}
+@media(max-width:1000px){
+  .best{grid-template-columns:minmax(0,1fr)}
+  .best-l{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px;scrollbar-width:thin}
+  .best-l .pc{flex:0 0 min(72vw,320px);scroll-snap-align:start}
+}
+.best{grid-template-columns:clamp(260px,26vw,380px) minmax(0,1fr)}
+.best-t h2{font-size:clamp(2.4rem,4.6vw,4.4rem)}
+@media(max-width:1000px){.best{grid-template-columns:minmax(0,1fr)}.best-t h2{font-size:clamp(2.6rem,9vw,4rem)}}
