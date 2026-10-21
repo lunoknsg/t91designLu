@@ -86,6 +86,7 @@ def footer():
 <p class="proto">Prototipo di design. Foto di campagna e di prodotto generate con IA, da sostituire con uno shooting reale. Testi dei servizi e dati del mockup in bozza da validare.</p>
 </footer>
 <script src="js/t91.js?v={VER}"></script>
+<script src="js/centri.js?v={VER}" defer></script>
 </body>
 </html>
 """
@@ -103,22 +104,6 @@ def rows():
     return "\n".join(out)
 
 
-CENTRES = [
-    ("Gpadel Borgaro", "Borgaro Torinese (TO)"),
-    ("City Padel Golden Goose Arena", "Milano, CityLife"),
-    ("Padel Indoor Baveno", "Baveno (VB)"),
-    ("Padel Albaro", "Genova"),
-    ("Country Padel", "Paderno Dugnano (MI)"),
-    ("The Padel Resort Como", "Como"),
-    ("Yep Padel", "Albano Sant'Alessandro (BG)"),
-    ("Contra Padel", "Roma"),
-    ("Colognola Racquet Club", "Bergamo"),
-    ("Padel Prime", "Osio Sotto (BG)"),
-    ("Tarta Padel", "Noto (SR), Sicilia"),
-    ("Padel Poreč", "Poreč, Croazia"),
-    ("The Padel Lab", "Biasca, Svizzera"),
-    ("Padel Seasons", "Monaco di Baviera, Germania"),
-]
 
 def best_cards():
     by = {r[0]: r for r in plp.RACKETS}
@@ -137,10 +122,6 @@ def best_cards():
 
 
 def home():
-    centres = "\n".join(
-        f'<li data-s="{n.lower()} {c.lower()}"><div><b>{n}</b><br><span>{c}</span></div><a href="#" aria-label="Indicazioni per {n}">Indicazioni</a></li>'
-        for n, c in CENTRES
-    )
     return head("T91 Padel | Racchette, servizi e centri", "Racchette e abbigliamento T91, più riparazione, personalizzazione, garanzie e 70 centri partner in Italia e in Europa.") + header("") + f"""
 <section class="hero dark" aria-labelledby="h1">
 <img class="bg" src="{CAMP}hero.jpg" alt="Giocatore in volo in uno smash di padel con la racchetta Holo, di sera sotto i riflettori">
@@ -196,23 +177,20 @@ def home():
 <ul class="bgrid three">{"".join(blog.card(p) for p in blog.POSTS)}</ul>
 </section>
 
-<section class="dark" id="centri" aria-labelledby="c-h">
-<div class="wrap"><div class="centres">
-<div style="display:grid;gap:22px;align-content:start">
-<div class="big" aria-hidden="true">70</div>
-<h2 id="c-h" class="d d-m">Centri partner in Italia e in Europa.</h2>
-<p class="lede mut">Trovi, provi e compri T91 dove giochi. Presto anche Click &amp; Collect: ordini online, ritiri nel centro.</p>
+<section class="dark cm" id="centri" aria-labelledby="c-h">
+<div class="wrap">
+<div class="cm-h"><h2 id="c-h" class="d d-l">Trova T91 vicino a te</h2><p class="lede mut">Centri partner in Italia e in Europa dove trovare, testare e acquistare T91.</p></div>
+<div class="cm-s">
+<label class="cap" for="q">Cerca citt&agrave; o centro</label>
+<div class="cm-r"><input id="q" type="search" placeholder="Cerca citt&agrave; o centro..." autocomplete="off"><button type="button" class="btn line" id="near">Vicino a me</button></div>
+<p class="cm-n" id="cmn" aria-live="polite">70 centri partner in Italia e in Europa</p>
 </div>
-<div class="find">
-<label for="q">Cerca per citt&agrave; o centro</label>
-<p class="cap mut" style="margin:-6px 0 0">14 centri su 70 in questo prototipo</p>
-<input id="q" type="search" placeholder="Es. Bergamo" autocomplete="off">
-<ul class="clist" id="clist" tabindex="0" aria-label="Elenco dei centri partner (14 di 70)">
-{centres}
-</ul>
-<p class="empty" id="none" hidden>Nessun centro trovato. Scrivici: ne stiamo aggiungendo.</p>
+<div class="cm-p">
+<ul class="cm-l" id="clist" tabindex="0" aria-label="Elenco dei centri partner"></ul>
+<div class="cm-m" id="cmap" role="application" aria-label="Mappa dei centri partner T91"></div>
 </div>
-</div></div>
+<p class="cm-c">Mappa con confini Natural Earth, dati di dominio pubblico.</p>
+</div>
 </section>
 
 <section class="split">

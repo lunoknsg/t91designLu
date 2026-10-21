@@ -98,3 +98,7 @@ Pagine: `blog.html` e tre articoli (`articolo-*.html`), generati da `tools/blog.
 | Premier Padel a Roma: nove giorni al Foro Italico | https://www.mrpadelpaddle.com/padel-italia/bnl-italy-major-premier-padel-9-giorni-intensi-di-padel/ (MrPadel Paddle) | `foro-italico.jpg`, foto A. Fioriti |
 
 Nota: l'articolo sul Foro Italico descrive il programma di un'edizione passata del torneo (date di luglio 2023); nell'articolo T91 le date non sono riportate.
+
+### Mappa dei centri (21/10/2026)
+
+La fascia "Trova T91 vicino a te" in home usa Leaflet 1.9.4 (`assets/vendor/`, licenza BSD) al posto di Google Maps, che richiede una chiave API: mare blu scuro, confini dei paesi in bianco, nessuna tessera esterna. I confini vengono da Natural Earth tramite `world-atlas` (dominio pubblico, `assets/mondo.geo.json`). I 70 centri (nome, indirizzo, telefono, coordinate) sono copiati dalla pagina pubblica di t91padel.com in `assets/centri.json`; i nomi dei referenti non sono riportati. Da aggiornare quando T91 cambia l'elenco.

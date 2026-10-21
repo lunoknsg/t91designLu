@@ -808,3 +808,45 @@ footer .proto{max-width:1680px;margin:14px auto 0;font-size:12px;color:#8f8e88}
 .best-q{align-self:end;display:grid;gap:16px;justify-items:start;max-width:30ch}
 .best-q h3{font:900 clamp(1.4rem,2vw,1.9rem)/1 var(--display);text-transform:uppercase;color:var(--orange-ink);text-wrap:balance}
 @media(max-width:1000px){.best-q{margin-top:8px}}
+
+/* ---------- Trova T91: elenco e mappa nella fascia nera ---------- */
+.cm .wrap{padding-block:clamp(48px,7vw,96px);display:grid;gap:28px}
+.cm-h{display:grid;gap:14px;justify-items:center;text-align:center}
+.cm-h h2{max-width:none}
+.cm-s{display:grid;gap:10px;justify-items:center;text-align:center}
+.cm-r{display:flex;gap:10px;width:min(640px,100%)}
+.cm-r input{flex:1;min-width:0;background:transparent;border:1px solid #fff;color:#fff;font:500 15px/1 var(--body);padding:16px 18px;border-radius:0}
+.cm-r input::placeholder{color:#9a9992}
+.cm-r input:focus{outline:2px solid var(--orange);outline-offset:-2px}
+.cm-r .btn{white-space:nowrap}
+.cm-n{font-size:13px;color:#b4b3ad}
+.cm-p{display:grid;grid-template-columns:minmax(280px,360px) minmax(0,1fr);border:1px solid #3a3a37;height:min(70vh,640px);min-height:440px}
+.cm-l{list-style:none;overflow:auto;border-right:1px solid #3a3a37;scrollbar-color:#555 #0b0b0b}
+.cm-l li{display:grid;gap:4px;padding:18px 20px;border-bottom:1px solid #2c2c2a;cursor:pointer;transition:background .2s}
+.cm-l li:hover,.cm-l li.on{background:#161615}
+.cm-l li.on{box-shadow:inset 0 0 0 1px var(--orange)}
+.cm-l li.cm-e{cursor:default;color:#b4b3ad}
+.cm-t{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.cm-t b{font:900 1.25rem/1 var(--display);text-transform:uppercase;letter-spacing:.01em}
+.cm-d{font:600 11px/1 var(--body);letter-spacing:.08em;color:var(--orange);white-space:nowrap}
+.cm-a{font-size:13px;color:#b4b3ad}
+.cm-ph{font-size:13px;color:var(--orange);font-variant-numeric:tabular-nums}
+.cm-b{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.cm-b a{font:600 11px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:#fff;border:1px solid #fff;padding:9px 12px;transition:background .2s,color .2s}
+.cm-b a:hover{background:#fff;color:var(--ink)}
+.cm-b .cm-call{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.cm-b .cm-call:hover{background:#fff;border-color:#fff}
+.cm-m{background:#0a1c3d;min-height:0;position:relative}
+.cm-m .leaflet-container{background:#0a1c3d;font-family:var(--body)}
+.cm-pin i{display:block;width:16px;height:16px;margin:3px;border-radius:50%;background:var(--orange);border:2px solid #fff;box-shadow:0 0 0 3px rgba(255,106,19,.35);transition:transform .2s}
+.cm-pin:hover i,.cm-pin.on i{transform:scale(1.35)}
+.cm-pin:focus-visible{outline:2px solid #fff;outline-offset:2px;border-radius:50%}
+.cm-m .leaflet-control-zoom a{background:#0b0b0b;color:#fff;border-color:#3a3a37;border-radius:0}
+.cm-m .leaflet-control-zoom a:hover{background:#fff;color:#0b0b0b}
+.cm-c{font-size:12px;color:#8f8e88;text-align:center}
+@media(max-width:900px){
+  .cm-p{grid-template-columns:minmax(0,1fr);grid-template-rows:auto 380px;height:auto}
+  .cm-l{max-height:360px;border-right:0;border-bottom:1px solid #3a3a37}
+  .cm-r{flex-wrap:wrap}
+  .cm-r .btn{flex:1}
+}
