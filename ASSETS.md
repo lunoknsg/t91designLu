@@ -102,3 +102,7 @@ Nota: l'articolo sul Foro Italico descrive il programma di un'edizione passata d
 ### Mappa dei centri (21/10/2026)
 
 La fascia "Trova T91 vicino a te" in home usa Leaflet 1.9.4 (`assets/vendor/`, licenza BSD) al posto di Google Maps, che richiede una chiave API: mare blu scuro, confini dei paesi in bianco, nessuna tessera esterna. I confini vengono da Natural Earth tramite `world-atlas` (dominio pubblico, `assets/mondo.geo.json`). I 70 centri (nome, indirizzo, telefono, coordinate) sono copiati dalla pagina pubblica di t91padel.com in `assets/centri.json`; i nomi dei referenti non sono riportati. Da aggiornare quando T91 cambia l'elenco.
+
+### Foto fascia "From Players to players" (21/10/2026)
+
+`assets/campaign/iriart-salandro.jpg`: fotografia fornita dal cliente (file `20260531_Emiliano_Martin_Iriart_Mauro_Agustin_Salandro_ZAF_2401.JPG`, evento BNL Italy Major Premier Padel 2026) con Emiliano Iriart e Bubu Salandro. Sostituisce la foto precedente. Diritti e liberatorie vanno confermati con T91 e con il fotografo prima di un uso pubblico.

@@ -194,7 +194,7 @@ def home():
 </section>
 
 <section class="split">
-<div class="img"><img src="{IMG_DONNA}" alt="Abbigliamento donna T91 SS26" loading="lazy"></div>
+<div class="img"><img class="pos-duo" src="{CAMP}iriart-salandro.jpg" alt="Emiliano Iriart e Bubu Salandro sorridono in campo con le racchette T91 bianche" loading="lazy"></div>
 <div class="txt">
 <h2 class="d d-l">From Players to players.</h2>
 <p class="lede">Ambassador, maestri e centri: la community che prova il prodotto prima di te e ti dice come va.</p>
