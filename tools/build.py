@@ -177,6 +177,14 @@ def home():
 </section>
 </div>
 
+<section class="mbx dark" aria-labelledby="mb-h">
+<img class="mbx-bg" src="{CAMP}mystery-box.jpg" alt="Mystery Box T91 su una panchina a bordo campo di padel, di sera" loading="lazy">
+<div class="mbx-in wrap">
+<h2 id="mb-h" class="d d-l">Con la Mystery Box T91<br>risparmi il 60%</h2>
+<a class="btn solid" href="#">Scoprila ora {ARROW}</a>
+</div>
+</section>
+
 <section class="feat" aria-labelledby="ft-h">
 <div class="feat-img"><img src="{CAMP}dettaglio.jpg" alt="Mani che avvolgono l'impugnatura di una racchetta T91" loading="lazy"></div>
 <div class="feat-txt"><h2 id="ft-h" class="d d-l">Una racchetta si cura.</h2><p class="lede">T91 Care ripara le racchette, anche di altri marchi. Non buttare quella che ami.</p><div class="btns"><a class="btn ink" href="servizi.html#care">T91 Care / Repair {ARROW}</a></div></div>

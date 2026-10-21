@@ -82,3 +82,7 @@ La prima immagine della galleria è `assets/racchette/boss-one-k12-pro-master.jp
 ### Contenuti da confermare (dal mockup)
 
 I testi vengono da https://noknok-web.github.io/T91_F/T91_mockup_pagina_prodotto.html; la descrizione e i dati tecnici dal catalogo ufficiale. Da confermare con il cliente: valutazione 4,9 e 770 recensioni (le quattro recensioni mostrate sono d'esempio e riferite ad altri modelli), rate Klarna, prezzo T91 Club (-30%), ritiro a Osio Sotto (Click & Collect non ancora attivo), spedizione gratuita 24/48h e reso 30 giorni, il blocco "n.1 d'Italia" (nome dell'atleta e citazione da inserire), prezzi del set e dei prodotti abbinati, valori di potenza/controllo, video di 1:45 (non ancora prodotto), articoli del blog.
+
+### Fascia Mystery Box (21/10/2026)
+
+`assets/campaign/mystery-box.jpg`: generata con Higgsfield (gpt_image_2_5, 2k, 16:9) partendo dall'immagine della Mystery Box presa dalla home di t91padel.com (scatola nera con linea dorata luminosa). Ambientata su una panchina in legno a bordo di un campo da padel blu, al tramonto, con i riflettori. Immagine sintetica da sostituire con uno scatto reale. Il "60%" nel testo è quello indicato dal cliente; il sito attuale parla di sconti "fino al -60%" su listino, da verificare con T91 prima della pubblicazione.
