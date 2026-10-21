@@ -66,7 +66,7 @@
     });
     var labels = [];
     function mk(text, lat, lng, min, cls, max) {
-      var m = L.marker([lat, lng], { pane: 'lab', interactive: false, keyboard: false, icon: L.divIcon({ className: 'lb ' + cls, html: '<span>' + text + '</span>', iconSize: null }) });
+      var m = L.marker([lat, lng], { pane: 'lab', interactive: false, keyboard: false, icon: L.divIcon({ className: 'mlb ' + cls, html: '<span>' + text + '</span>', iconSize: null }) });
       m._min = min; m._max = max || 99; return m;
     }
     function sync() {
